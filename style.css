@@ -17,8 +17,12 @@
   --primary__color: #ED1B24;
   --primary__color--medium: #a61319;
   --primary__color--dark: #5f0b0e;
-  --font__color: #212529;
+  --font__color: #fff;
   --white: #fff;
+  --gray--background: #222;
+  --gray--medium: #333;
+  --gray--light: #777;
+
 }
 
 * {
@@ -35,8 +39,8 @@ body {
   font-family: "Rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: var(--font-color);
-  background-color: #222;
+  color: var(--font__color);
+  background-color: var(--gray--background);
 }
 
 .btn {
@@ -49,6 +53,70 @@ body {
 
 .center {
   text-align: center;
+}
+
+.header__primary {
+  font-size: 5.2rem;
+  font-weight: 700;
+  animation: 0.5s linear hero__text;
+}
+
+.header__secondary {
+  font-size: 4.4rem;
+  margin-bottom: 9.6rem;
+}
+
+.header__tertiary {
+  font-size: 2.4rem;
+  margin-bottom: 2.4rem;
+}
+
+.header__primary,
+.header__secondary,
+.header__tertiary {
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.sub__header {
+  color: var(--primary__color);
+  font-size: 2.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 1.6rem;
+}
+
+.section__padding {
+  padding: 9.6rem 3.6rem;
+}
+
+.container {
+  max-width: 120rem;
+  padding: 0 3.6rem;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 9.6rem;
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--5 {
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .margin__top--24 {
@@ -102,17 +170,8 @@ body {
   border-radius: 1.2rem;
 }
 
-.hero__header {
-  font-size: 5.2rem;
-  color: var(--white);
-  font-weight: 700;
-  font-style: italic;
-  letter-spacing: 1px;
-  animation: 0.5s linear hero__text;
-}
-
 .hero__description {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: var(--white);
   animation: 0.5s linear hero__description;
   line-height: 1.5;
@@ -174,7 +233,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 2.4rem 3.2rem;
+  margin: 1.6rem 2.4rem;
 }
 
 .nav__navigation {
@@ -207,4 +266,32 @@ body {
 .nav__btn--last:hover {
   color: var(--white);
   background-color: var(--primary__color--medium);
+}
+
+/*************************/
+/* How It Works */
+/*************************/
+
+.hiw__number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: var(--gray--light);
+
+}
+
+.hiw__description {
+  font-size: 1.6rem;
+  line-height: 1.7;
+}
+
+.hiw__img {
+  width: 100%;
+  border-radius: 0.8rem;
+}
+
+.hiw__header {
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+  padding-left: 1.8rem;
+  border-left: 0.5rem solid var(--primary__color);
 }
