@@ -33,6 +33,7 @@
 
 html {
   font-size: 62.5%;
+  scrollbar-color: var(--primary__color) var(--gray--medium);
 }
 
 body {
@@ -67,8 +68,17 @@ body {
 }
 
 .header__tertiary {
+  font-size: 3.2rem;
+  margin-bottom: 3.2rem;
+  padding-left: 1.8rem;
+  border-left: 0.5rem solid var(--primary__color);
+}
+
+.header__quaternary {
   font-size: 2.4rem;
   margin-bottom: 2.4rem;
+  padding-left: 1.2rem;
+  border-left: 0.5rem solid var(--primary__color);
 }
 
 .header__primary,
@@ -144,6 +154,20 @@ body {
 }
 
 /*************************/
+/* Customize Things */
+/*************************/
+
+::selection {
+  background: var(--primary__color);
+  color: var(--white);
+}
+
+::-moz-selection {
+  background: var(--primary__color);
+  color: var(--white);
+}
+
+/*************************/
 /* Hero section */
 /*************************/
 
@@ -172,7 +196,7 @@ body {
 
 .hero__description {
   font-size: 2rem;
-  color: var(--white);
+  color: var(--gray--light);
   animation: 0.5s linear hero__description;
   line-height: 1.5;
 }
@@ -289,9 +313,20 @@ body {
   border-radius: 0.8rem;
 }
 
-.hiw__header {
-  font-size: 3.2rem;
-  margin-bottom: 3.2rem;
-  padding-left: 1.8rem;
-  border-left: 0.5rem solid var(--primary__color);
+/*************************/
+/* Features */
+/*************************/
+
+.feature__icon {
+  background-color: var(--primary__color);
+  color: var(--white);
+  height: 3.2rem;
+  width: 3.2rem;
+  padding: 1rem;
+  border-radius: 99999rem;
+}
+
+.feature__description {
+  font-size: 1.6rem;
+  line-height: 1.7;
 }
