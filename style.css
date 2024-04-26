@@ -330,3 +330,124 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
 }
+
+/*************************/
+/* Testimonial */
+/*************************/
+
+.slider {
+  max-width: 100rem;
+  height: 50rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  padding: 6.4rem 8rem;
+}
+
+.slide__header {
+  border-left: none;
+  padding-left: 0;
+}
+
+.slide__text {
+  font-size: 1.8rem;
+  line-height: 1.7;
+  color: var(--gray--light);
+}
+
+.slide__author--img {
+  height: 6.4rem;
+  border-radius: 99999rem;
+  border: 3px solid var(--primary__color);
+  display: block;
+}
+
+.slider__btn {
+  position: absolute;
+  height: 5.5rem;
+  width: 5.5rem;
+  font-size: 3.2rem;
+  border-radius: 99999rem;
+  border: none;
+  background-color: var(--primary__color);
+  color: var(--white);
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__btn:hover {
+  background-color: var(--primary__color--medium);
+}
+
+.slider__btn--left {
+  left: -5%;
+  transform: translate(-50%, -50%);
+}
+
+.slider__btn--right {
+  right: -5%;
+  transform: translate(50%, -50%);
+}
+
+.slide__author {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+}
+
+.slide__author--name {
+  font-size: 1.6rem;
+}
+
+.slide__author--score {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.score__text {
+  font-size: 1.2rem;
+}
+
+.score__icon {
+  color: var(--primary__color);
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+.quotes {
+  position: absolute;
+  height: 3.6rem;
+  left: 2rem;
+  top: 1rem;
+}
+
+.dots {
+  position: absolute;
+  display: flex;
+  gap: 1.6rem;
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.dot {
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: var(--gray--light);
+  border-radius: 99999rem;
+  cursor: pointer;
+}
+
+.dot--active {
+  background-color: var(--primary__color);
+}
