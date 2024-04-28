@@ -19,6 +19,7 @@
   --primary__color--dark: #5f0b0e;
   --font__color: #fff;
   --white: #fff;
+  --gray--footer: #111;
   --gray--background: #222;
   --gray--medium: #333;
   --gray--light: #777;
@@ -99,7 +100,7 @@ body {
 }
 
 .section__padding {
-  padding: 9.6rem 3.6rem;
+  padding: 9.6rem 3.2rem;
 }
 
 .container {
@@ -345,6 +346,7 @@ body {
 .slide {
   position: absolute;
   padding: 6.4rem 8rem;
+  transition: all 0.2s;
 }
 
 .slide__header {
@@ -450,4 +452,79 @@ body {
 
 .dot--active {
   background-color: var(--primary__color);
+}
+
+/*************************/
+/* Footer */
+/*************************/
+
+.footer {
+  background-color: var(--gray--footer);
+  padding: 6.4rem 3.2rem;
+}
+
+.footer__logo {
+  height: 6.4rem;
+  display: block;
+  margin: 4.8rem auto;
+}
+
+.footer__navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__btn {
+  color: var(--white);
+  margin: 0 2.4rem;
+  transition: all 0.2s;
+}
+
+.footer__btn:hover {
+  color: var(--primary__color);
+}
+
+.footer__text {
+  margin: 0 auto;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.year {
+  font-weight: 500;
+}
+
+.me {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.me:hover {
+  color: var(--primary__color);
+}
+
+.footer__media {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.4rem;
+  margin-bottom: 6.4rem;
+}
+
+.footer__medium {
+  height: 3.2rem;
+  width: 3.2rem;
+  padding: 1rem;
+  border-radius: 99999rem;
+  background-color: var(--white);
+  color: var(--gray--footer);
+  transition: all 0.2s;
+}
+
+.footer__medium:hover {
+  background-color: var(--primary__color);
+  cursor: pointer;
 }
