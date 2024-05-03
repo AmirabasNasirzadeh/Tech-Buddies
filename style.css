@@ -154,6 +154,14 @@ body {
   margin-top: 9.6rem;
 }
 
+.hide {
+  display: none;
+}
+
+.hide--nav {
+  transform: translateX(100%);
+}
+
 /*************************/
 /* Customize Things */
 /*************************/
@@ -174,20 +182,21 @@ body {
 
 .hero {
   height: 90dvh;
-  background-position: center;
-  background-size: cover;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   border-bottom: 2px solid #777;
 }
 
 .hero__content {
   max-width: 130rem;
   margin: 0 auto;
-  margin-top: 9.6rem;
+  margin-top: 7rem;
   padding: 0 3.6rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.8rem;
+  gap: 6.4rem;
+}
+
+.hero__text {
+  transform: translateY(6rem);
 }
 
 .hero__img {
@@ -291,6 +300,74 @@ body {
 .nav__btn--last:hover {
   color: var(--white);
   background-color: var(--primary__color--medium);
+}
+
+.nav__mobile {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  height: 100dvh;
+  width: 30rem;
+  background-color: var(--gray--background);
+  transition: all 0.5s;
+  border-top-left-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+  box-shadow: -0.5rem 0 1rem #00000030;
+}
+
+.nav__mobile--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem;
+  margin-bottom: 3.2rem;
+  border-bottom: 3px dashed var(--primary__color);
+}
+
+.nav__mobil--logo {
+  height: 4.8rem;
+  width: 4.8rem;
+}
+
+.nav__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  transition: all 0.5s;
+}
+
+.nav__mobile--btn {
+  border: none;
+  background-color: #00000000;
+}
+
+.nav__mobile--open {
+  display: none;
+}
+
+.nav__mobile--icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: var(--primary__color);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.nav__mobile--icon:hover {
+  color: var(--primary__color--medium);
+}
+
+.nav__mobile--navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
 }
 
 /*************************/
@@ -470,15 +547,17 @@ body {
 }
 
 .footer__navigation {
-  display: flex;
+  display: grid;
+  gap: 3.2rem;
+  grid-template-columns: repeat(6, 1fr);
   align-items: center;
   justify-content: center;
 }
 
 .footer__btn {
   color: var(--white);
-  margin: 0 2.4rem;
   transition: all 0.2s;
+  text-align: center;
 }
 
 .footer__btn:hover {
@@ -527,4 +606,90 @@ body {
 .footer__medium:hover {
   background-color: var(--primary__color);
   cursor: pointer;
+}
+
+/*************************/
+/* Modal Window */
+/*************************/
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--gray--background);
+  height: 47rem;
+  width: 70rem;
+  box-shadow: 0rem 0 2rem #00000070;
+  border-radius: 1rem;
+  z-index: 100;
+  padding: 4.8rem;
+}
+
+.modal__btn--close {
+  position: absolute;
+  height: 3.2rem;
+  width: 3.2rem;
+  top: 1.6rem;
+  right: 1.6rem;
+  border: none;
+  background-color: #00000000;
+  color: var(--primary__color);
+}
+
+.modal__btn--icon {
+  height: 3.2rem;
+  width: 3.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal__btn--icon:hover {
+  color: var(--primary__color--medium);
+}
+
+.modal__header {
+  font-size: 3.6rem;
+  margin-bottom: 4.8rem;
+}
+
+.modal__form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+
+.modal__form--input {
+  height: 4.8rem;
+  width: 100%;
+  padding-left: 1.6rem;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.6rem;
+  font-family: inherit;
+}
+
+.modal__form--input:focus {
+  outline: 3px solid var(--primary__color);
+}
+
+select.modal__form--input:focus {
+  outline: none;
+}
+
+.modal__form--btn {
+  height: 4.8rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1.8rem;
+  font-family: inherit;
+  background-color: var(--primary__color);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modal__form--btn:hover {
+  background-color: var(--primary__color--medium);
 }

@@ -1,0 +1,175 @@
+@media (max-width: 80em) {
+  .hero__text {
+    transform: translateY(0rem);
+  }
+
+  .header__primary {
+    font-size: 4.4rem;
+  }
+
+  .header__secondary {
+    font-size: 3.6rem;
+  }
+
+  .header__tertiary {
+    font-size: 3rem;
+  }
+
+  .hero__description {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 68em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .grid {
+    gap: 6.4rem;
+  }
+
+  .slider__btn--left {
+    left: 2%;
+  }
+
+  .slider__btn--right {
+    right: 2%;
+  }
+}
+
+@media (max-width: 60em) {
+  .grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .img--2 {
+    grid-row-start: 4;
+    grid-row-end: 5;
+  }
+
+  .hiw__img {
+    margin-bottom: 4.8rem;
+  }
+
+  .img--3 {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 53em) {
+
+  .hero {
+    height: auto;
+  }
+
+  .hero__content {
+    grid-template-columns: 1fr;
+    max-width: 80rem;
+  }
+
+  .hero__img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 9.6rem;
+  }
+
+  .hero__text {
+    text-align: center;
+  }
+
+  .nav__mobile--open {
+    display: block;
+  }
+
+  .nav__navigation {
+    display: none;
+  }
+
+  .footer .container {
+    padding: 0;
+  }
+}
+
+@media (max-width: 46em) {
+  .grid--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .feature--3 {
+    transform: translateX(60%);
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 38em) {
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .feature--3 {
+    transform: translateX(0);
+  }
+
+  .slide__text {
+    font-size: 1.6rem;
+    line-height: 1.4;
+  }
+
+  .slider__btn {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+
+  .slider__btn--right {
+    right: 0;
+  }
+
+  .slider__btn--left {
+    left: 0;
+  }
+
+  .slide {
+    padding: 4.8rem 6.4rem;
+  }
+
+  .dots {
+    top: 100%;
+  }
+
+  .footer__navigation {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 28em) {
+  html {
+    font-size: 43.75%;
+  }
+
+  .section__padding {
+    padding: 6.4rem 2.4rem;
+  }
+
+  .header__secondary {
+    margin-bottom: 6.4rem;
+  }
+}
+
+@media (max-width: 25em) {
+  .dots {
+    top: 115%;
+  }
+
+  .testimonial {
+    margin-bottom: 6.8rem;
+  }
+}

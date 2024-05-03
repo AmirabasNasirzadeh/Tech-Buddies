@@ -11,6 +11,7 @@
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="queries.css">
   <link rel="shortcut icon" type="image/png" href="images/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,6 +38,9 @@
         <a href="#" class="btn nav__btn">Testimonial</a>
         <a href="#" class="btn nav__btn nav__btn--last">Create Account</a>
       </div>
+      <button class="nav__mobile--btn nav__mobile--open">
+        <ion-icon name="menu-outline" class="nav__mobile--icon"></ion-icon>
+      </button>
     </nav>
 
     <!-------------------------------------------------------------------------->
@@ -66,7 +70,7 @@
       <div class="container">
         <p class="sub__header">how it works</p>
         <h2 class="header__secondary">How everything works in Tech Buddies.</h2>
-        <div class="grid grid--2">
+        <div class="hiw__container grid grid--2">
           <div class="hiw__box">
             <p class="hiw__number">01</p>
             <h3 class="margin__top--24 header__tertiary">We receive orders from
@@ -77,8 +81,8 @@
               ipsam! Rem fugit, amet impedit perspiciatis mollitia voluptate dolore. Lorem ipsum
               dolor sit, amet consectetur adipisicing elit.</p>
           </div>
-          <img src="images/pc--1.jpg" alt="pc no. 1" class="hiw__img">
-          <img src="images/pc--2.jpg" alt="pc no. 2" class="hiw__img">
+          <img src="images/pc--1.jpg" alt="pc no. 1" class="hiw__img img--1">
+          <img src="images/pc--2.jpg" alt="pc no. 2" class="hiw__img img--2">
           <div class="hiw__box">
             <p class="hiw__number">02</p>
             <h3 class="margin__top--24 header__tertiary">Then, the process of design or assemble
@@ -101,7 +105,7 @@
               ipsam! Rem fugit, amet impedit perspiciatis mollitia voluptate dolore. Lorem ipsum
               dolor sit, amet consectetur adipisicing elit.</p>
           </div>
-          <img src="images/pc--3.jpg" alt="pc no. 3" class="hiw__img">
+          <img src="images/pc--3.jpg" alt="pc no. 3" class="hiw__img img--3">
         </div>
       </div>
     </section>
@@ -112,7 +116,7 @@
       <div class="container">
         <p class="sub__header">Features</p>
         <h2 class="header__secondary">Why choosing us is the best decision?</h2>
-        <div class="grid grid--3">
+        <div class="feature__container grid grid--3">
           <div class="feature">
             <ion-icon name="build-outline" class="feature__icon"></ion-icon>
             <h4 class="header__quaternary margin__top--32">
@@ -139,7 +143,7 @@
               dicta vitae.
             </p>
           </div>
-          <div class="feature">
+          <div class="feature feature--3">
             <ion-icon name="time-outline" class="feature__icon"></ion-icon>
             <h4 class="header__quaternary margin__top--32">
               24/7 support
@@ -285,6 +289,7 @@
           <a href="#" class="btn footer__btn">Terms of Service</a>
           <a href="#" class="btn footer__btn">Privacy Policy</a>
           <a href="#" class="btn footer__btn">Contact Us</a>
+          <a href="#" class="btn footer__btn">Pricing</a>
         </div>
         <img src="images/favicon.png" alt="Website logo" class="footer__logo">
         <div class="footer__media">
@@ -296,11 +301,54 @@
           <ion-icon name="logo-twitter" class="footer__medium"></ion-icon>
         </div>
         <p class="footer__text">
-          &copy; Copyright <span class="year">9999</span>; All rights reserved. Coded by <a
+          &copy; Copyright <span class="year">9999</span>;<br><br> All rights reserved. Coded by <a
              href="https://github.com/AmirabasNasirzadeh" class="me">Amirabas Nasirzadeh</a>.
         </p>
       </div>
     </footer>
+
+    <!-------------------------------------------------------------------------->
+    <!-- Mobile Navigation -->
+    <div class="nav__mobile hide--nav">
+      <div class="nav__mobile--header">
+        <button class="nav__mobile--btn nav__mobile--close">
+          <ion-icon name="close-outline" class="nav__mobile--icon"></ion-icon>
+        </button>
+        <img src="images/favicon.png" alt="Mobile navigation logo" class="nav__mobil--logo">
+      </div>
+      <div class="nav__mobile--navigation">
+        <a href="#" class="btn nav__btn">How It Works</a>
+        <a href="#" class="btn nav__btn">Features</a>
+        <a href="#" class="btn nav__btn">Testimonial</a>
+        <a href="#" class="btn nav__btn nav__btn--last">Create Account</a>
+      </div>
+    </div>
+    <div class="nav__overlay hide"></div>
+
+    <!-------------------------------------------------------------------------->
+    <!-- Modal Window -->
+    <div class="modal hide">
+      <button class="modal__btn--close">
+        <ion-icon name="close-outline" class="modal__btn--icon"></ion-icon>
+      </button>
+      <p class="sub__header">Create Account</p>
+      <h2 class="header__secondary modal__header">Create your account in only 5 minutes!</h2>
+      <form class="modal__form">
+        <input type="text" class="modal__form--input" placeholder="Username">
+        <input type="password" class="modal__form--input" placeholder="Password">
+        <input type="number" class="modal__form--input" placeholder="Phone Number">
+        <input type="email" class="modal__form--input" placeholder="E-mail">
+        <select class="modal__form--input">
+          <option>How did you find us?</option>
+          <option>Youtube ads</option>
+          <option>Family & Friends</option>
+          <option>Podcasts</option>
+          <option>Social Media</option>
+          <option>Other</option>
+        </select>
+        <button class="modal__form--btn">Next Step &DoubleLongRightArrow;</button>
+      </form>
+    </div>
 
     <!-------------------------------------------------------------------------->
     <!-- Scripts -->
