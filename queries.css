@@ -148,6 +148,22 @@
   .footer__navigation {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .modal {
+    width: 55rem;
+  }
+
+  .modal__form--input {
+    font-size: 1.4rem;
+  }
+
+  .modal__form--btn {
+    font-size: 1.6rem;
+  }
+
+  .modal__header {
+    margin-bottom: 3.6rem;
+  }
 }
 
 @media (max-width: 28em) {
@@ -162,6 +178,14 @@
   .header__secondary {
     margin-bottom: 6.4rem;
   }
+
+  .modal {
+    width: 50rem;
+  }
+
+  .modal__header {
+    margin-bottom: 3.6rem;
+  }
 }
 
 @media (max-width: 25em) {
@@ -171,5 +195,13 @@
 
   .testimonial {
     margin-bottom: 6.8rem;
+  }
+
+  .modal {
+    width: 48rem;
+  }
+
+  .modal__header {
+    margin-bottom: 3.6rem;
   }
 }
