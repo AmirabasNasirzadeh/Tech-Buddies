@@ -100,3 +100,9 @@ document.querySelector(`.nav__mobile--navigation`).addEventListener(`click`, fun
   closeNav();
   goToSection(e);
 });
+
+////////////////////////////////////////
+// Copyright Year
+
+const year = new Date().getFullYear();
+document.querySelector(`.year`).textContent = year;
