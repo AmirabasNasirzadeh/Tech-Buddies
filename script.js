@@ -22,9 +22,12 @@ const openNav = function (e) {
 };
 
 const closeNav = function (e) {
-  mobileNav.classList.add(`hide--nav`);
-  overlay.classList.add(`hide`);
-  closeModal();
+  if (!modal.classList.contains(`hide`)) {
+    mobileNav.classList.add(`hide--nav`);
+  } else {
+    overlay.classList.add(`hide`);
+    mobileNav.classList.add(`hide--nav`);
+  }
 };
 
 btnNavMobileOpen.addEventListener(`click`, openNav);
