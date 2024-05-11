@@ -12,6 +12,9 @@ const btnNavMobileClose = document.querySelector(`.nav__mobile--close`);
 const mobileNav = document.querySelector(`.nav__mobile`);
 const btnHero = document.querySelector(`.hero__btn`);
 const section1 = document.querySelector(`#section--1`);
+const nav = document.querySelector(`.nav`);
+const header = document.querySelector(`.hero`);
+const main = document.querySelector(`.main`);
 
 ////////////////////////////////////////
 // Mobile Navigation
@@ -109,3 +112,27 @@ document.querySelector(`.nav__mobile--navigation`).addEventListener(`click`, fun
 
 const year = new Date().getFullYear();
 document.querySelector(`.year`).textContent = year;
+
+////////////////////////////////////////
+// Sticky Navigation
+
+const navHeight = nav.getBoundingClientRect().height;
+
+const navObserverOptions = {
+  root: null,
+  rootMargin: `-${navHeight}px`,
+  tresholthreshold: 0,
+};
+
+const navObserverCallback = function (entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting === false) {
+    nav.classList.add(`sticky__nav`);
+  } else {
+    nav.classList.remove(`sticky__nav`);
+  }
+};
+
+const navObserver = new IntersectionObserver(navObserverCallback, navObserverOptions);
+navObserver.observe(header);
