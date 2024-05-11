@@ -636,7 +636,7 @@ body {
   width: 70rem;
   box-shadow: 0rem 0 2rem #00000070;
   border-radius: 1rem;
-  z-index: 100;
+  z-index: 9999999;
   padding: 4.8rem;
 }
 
