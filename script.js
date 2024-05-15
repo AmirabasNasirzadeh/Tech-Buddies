@@ -136,3 +136,23 @@ const navObserverCallback = function (entries) {
 
 const navObserver = new IntersectionObserver(navObserverCallback, navObserverOptions);
 navObserver.observe(header);
+
+////////////////////////////////////////
+// Revealing Elements on Scroll
+
+const allSections = document.querySelectorAll(`.section`);
+
+const revealingObserverCallback = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove(`section--hidden`);
+  observer.unobserve(entry.target);
+};
+
+const revealingObserver = new IntersectionObserver(revealingObserverCallback, { root: null, threshold: 0.15 });
+
+allSections.forEach((section) => {
+  revealingObserver.observe(section);
+});

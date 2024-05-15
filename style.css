@@ -103,6 +103,15 @@ body {
   padding: 9.6rem 3.2rem;
 }
 
+.section {
+  transition: transform 1s, opacity 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .container {
   max-width: 120rem;
   padding: 0 3.6rem;
@@ -160,6 +169,14 @@ body {
 
 .hide--nav {
   transform: translateX(100%);
+}
+
+img {
+  transition: filter 0.5s;
+}
+
+.lazy {
+  filter: blur(20px);
 }
 
 /*************************/
