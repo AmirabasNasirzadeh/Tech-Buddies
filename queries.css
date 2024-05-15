@@ -30,11 +30,11 @@
   }
 
   .slider__btn--left {
-    left: 2%;
+    left: 5%;
   }
 
   .slider__btn--right {
-    right: 2%;
+    right: 5%;
   }
 }
 
@@ -134,11 +134,11 @@
   }
 
   .slider__btn--right {
-    right: 0;
+    right: 10%;
   }
 
   .slider__btn--left {
-    left: 0;
+    left: 10%;
   }
 
   .slider {
@@ -150,7 +150,7 @@
   }
 
   .dots {
-    top: 100%;
+    top: 80%;
   }
 
   .footer__navigation {
@@ -197,8 +197,12 @@
 }
 
 @media (max-width: 25em) {
+  .slider {
+    height: 60rem;
+  }
+
   .dots {
-    top: 115%;
+    top: 85%;
   }
 
   .testimonial {

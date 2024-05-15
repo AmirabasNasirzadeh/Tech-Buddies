@@ -444,17 +444,22 @@ img {
 /* Testimonial */
 /*************************/
 
+.testimonial {
+  position: relative;
+}
+
 .slider {
   max-width: 100rem;
   height: 50rem;
   margin: 0 auto;
   position: relative;
+  overflow: hidden;
 }
 
 .slide {
   position: absolute;
   padding: 6.4rem 8rem;
-  transition: all 0.2s;
+  transition: all 1s;
 }
 
 .slide__header {
@@ -498,12 +503,12 @@ img {
 }
 
 .slider__btn--left {
-  left: -5%;
+  left: 10%;
   transform: translate(-50%, -50%);
 }
 
 .slider__btn--right {
-  right: -5%;
+  right: 10%;
   transform: translate(50%, -50%);
 }
 

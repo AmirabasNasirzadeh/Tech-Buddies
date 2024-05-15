@@ -164,7 +164,6 @@ const allImages = document.querySelectorAll(`.hiw__img`);
 
 const lazyLoadingObserverCallback = function (entries, observer) {
   const [entry] = entries;
-  console.log(entry);
 
   if (!entry.isIntersecting) return;
 
@@ -180,4 +179,72 @@ const lazyLoadingObserver = new IntersectionObserver(lazyLoadingObserverCallback
 allImages.forEach((img) => {
   img.classList.add(`lazy`);
   lazyLoadingObserver.observe(img);
+});
+
+////////////////////////////////////////
+// Slider Component
+const allSlides = document.querySelectorAll(`.slide`);
+const btnSliderRight = document.querySelector(`.slider__btn--right`);
+const btnSliderLeft = document.querySelector(`.slider__btn--left`);
+const dotsContainer = document.querySelector(`.dots`);
+const dots = document.querySelectorAll(`.dot`);
+let currentSlide = 0;
+const slidesLength = allSlides.length - 1;
+
+const addActiveBtn = function (slide) {
+  dots.forEach((dot) => {
+    dot.classList.remove(`dot--active`);
+    document.querySelector(`.dot[data-slide="${slide}"]`).classList.add(`dot--active`);
+  });
+};
+addActiveBtn(currentSlide);
+
+const goToSlide = function (slide) {
+  allSlides.forEach((s, index) => {
+    s.style.transform = `translateX(${100 * (index - slide)}%)`;
+  });
+};
+goToSlide(0);
+
+const goRight = function () {
+  if (currentSlide == slidesLength) {
+    currentSlide = 0;
+  } else {
+    currentSlide++;
+  }
+
+  goToSlide(currentSlide);
+  addActiveBtn(currentSlide);
+};
+
+const goLeft = function () {
+  if (currentSlide == 0) {
+    currentSlide = slidesLength;
+  } else {
+    currentSlide--;
+  }
+
+  goToSlide(currentSlide);
+  addActiveBtn(currentSlide);
+};
+
+btnSliderLeft.addEventListener(`click`, function () {
+  goLeft();
+});
+
+btnSliderRight.addEventListener(`click`, function () {
+  goRight();
+});
+
+dotsContainer.addEventListener(`click`, function (e) {
+  if (e.target.classList.contains(`dot`)) {
+    currentSlide = e.target.dataset.slide;
+    goToSlide(currentSlide);
+    addActiveBtn(currentSlide);
+  }
+});
+
+document.addEventListener(`keydown`, function (e) {
+  if (e.key === `ArrowLeft`) goLeft();
+  if (e.key === `ArrowRight`) goRight();
 });
