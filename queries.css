@@ -90,6 +90,10 @@
   .footer .container {
     padding: 0;
   }
+
+  .btn.nav__btn {
+    font-size: 2rem;
+  }
 }
 
 @media (max-width: 46em) {
@@ -106,7 +110,7 @@
   }
 
   .btn {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
 }
 
@@ -135,6 +139,10 @@
 
   .slider__btn--left {
     left: 0;
+  }
+
+  .slider {
+    margin-bottom: 12.8rem;
   }
 
   .slide {

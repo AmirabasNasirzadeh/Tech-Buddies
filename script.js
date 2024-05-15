@@ -156,3 +156,28 @@ const revealingObserver = new IntersectionObserver(revealingObserverCallback, { 
 allSections.forEach((section) => {
   revealingObserver.observe(section);
 });
+
+////////////////////////////////////////
+// Lazy Loading Images
+
+const allImages = document.querySelectorAll(`.hiw__img`);
+
+const lazyLoadingObserverCallback = function (entries, observer) {
+  const [entry] = entries;
+  console.log(entry);
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove(`lazy`);
+};
+
+const lazyLoadingObserver = new IntersectionObserver(lazyLoadingObserverCallback, {
+  root: null,
+  threshold: 0,
+  rootMargin: `-150px`,
+});
+
+allImages.forEach((img) => {
+  img.classList.add(`lazy`);
+  lazyLoadingObserver.observe(img);
+});
